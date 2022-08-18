@@ -1,9 +1,9 @@
 import React from "react";
-import CalendarPage from './pages/CalendarPage.tsx'
 
 
 
-import CalenderPage from "./pages/CalenderPage";
+
+import CalendarPage from "./pages/CalendarPage.tsx";
 import { AuthContextProvider } from "./context/AuthContext";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
@@ -18,12 +18,12 @@ function App() {
 
       <AuthContextProvider>
         <NavBar />
-        {/* <CalenderPage /> */}
+        { /* <CalendarPage /> */}
         <Routes>
           <Route path="/" element={<Home />} />;
           <Route path="/signin" element={<Signin />} />;
           <Route path="/account" element={<Account />} />;
-          <Route path="/calendar" element={<CalenderPage />} />;
+          <Route path="/calendar" element={<CalendarPage />} />;
         </Routes>
       </AuthContextProvider>
 
