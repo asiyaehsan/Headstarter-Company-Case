@@ -1,11 +1,15 @@
 import React from "react";
-import CalenderPage from "./Components/CalenderPage/CalenderPage";
+import CalendarPage from './Components/CalendarPage/CalendarPage.tsx'
+
+
+
 
 
 function App() {
   return (
     <div>
-      <CalenderPage />
+      <CalendarPage />
+
     </div>
   );
 }
