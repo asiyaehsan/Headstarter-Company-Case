@@ -1,4 +1,8 @@
 import React from "react";
+import CalendarPage from './pages/CalendarPage.tsx'
+
+
+
 import CalenderPage from "./pages/CalenderPage";
 import { AuthContextProvider } from "./context/AuthContext";
 import { Route, Routes } from "react-router-dom";
@@ -7,9 +11,11 @@ import { Signin } from "./pages/Signin";
 import { Account } from "./pages/Account";
 import NavBar from "./components/NavBar";
 
+
 function App() {
   return (
     <div>
+
       <AuthContextProvider>
         <NavBar />
         {/* <CalenderPage /> */}
@@ -20,6 +26,7 @@ function App() {
           <Route path="/calendar" element={<CalenderPage />} />;
         </Routes>
       </AuthContextProvider>
+
     </div>
   );
 }
