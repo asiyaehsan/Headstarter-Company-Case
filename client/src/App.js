@@ -1,9 +1,11 @@
 import React from "react";
+import CalenderPage from "./Components/CalenderPage/CalenderPage";
+
 
 function App() {
   return (
-    <div className="App">
-      This is the starter code
+    <div>
+      <CalenderPage />
     </div>
   );
 }
