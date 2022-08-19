@@ -5,7 +5,7 @@ import { Home } from "./pages/Home";
 import { Signin } from "./pages/Signin";
 import { Account } from "./pages/Account";
 import { Protected } from "./components/Protected";
-import CalenderPage from "./components/CalenderPage";
+import CalendarPage from "./components/CalendarPage.tsx";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
             }
           />
           ; 
-          <Route path="/calender" element={<CalenderPage />} />;
+          <Route path="/calender" element={<CalendarPage />} />;
         </Routes> 
       </AuthContextProvider>
     </div>

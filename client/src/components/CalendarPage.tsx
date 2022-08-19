@@ -2,7 +2,7 @@ import React from 'react'
 import FullCalender, { DatesSetArg } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction'
-import listPlugin from '@fullcalendar/list';
+import timeGridPlugin from '@fullcalendar/timegrid';
 import { db } from '../firebase-config';
 import {
   addDoc,
@@ -34,12 +34,15 @@ const CalenderPage = () => {
     const handleDateClick = async (e: DateClickArg) => {
       if (e.jsEvent.shiftKey) {
         const title = prompt('Enter title', e.dateStr);
-      
+        const confirmAllDay = prompt('Is this an all day event?');
+        
+        
         try {
           await addDoc(collection(db, 'Events'), {
            title: title ? title : e.dateStr,
            start: e.date,
-          allDay: true
+            allDay: confirmAllDay === 'yes' ? true : false ,
+          
           })
         } catch (err) {
             alert(err)
@@ -57,7 +60,8 @@ const CalenderPage = () => {
           id: doc.id,
           title:doc.get('title'),
           start: doc.get('start').toDate('start'),
-          allDay:doc.get('allDay')
+          allDay: doc.get('allDay'),
+      
         }
       });
       console.log(array)
@@ -78,8 +82,13 @@ const CalenderPage = () => {
           
                 datesSet={handleDatesSet}
                 events = {data}
-                plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
+                plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
                 dateClick={handleDateClick}
+                headerToolbar={{
+                    left: 'prev,next today',
+                    center: 'title',
+                   right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            }}
             />
         </>
     )
