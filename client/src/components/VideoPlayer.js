@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function VideoPlayer(props) {
   const { users, tracks } = props;
+  // const [gridSpacing, setGridSpacing] = useState(12);
   const [gridSpacing, setGridSpacing] = useState(12);
 
   useEffect(() => {

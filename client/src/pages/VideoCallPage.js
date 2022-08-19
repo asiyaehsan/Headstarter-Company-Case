@@ -7,9 +7,7 @@ export default function VideoCallPage() {
   const [inCall, setInCall] = useState(false);
   return (
     // Agora video player doesn't work if the parent container's height is not set to 100%
-    <div
-      className="video-call-container"
-      style={{ height: "100%", width: "100%" }}>
+    <div className="video-call-container" style={{ height: "100%" }}>
       {inCall ? (
         <VideoCall setInCall={setInCall} />
       ) : (

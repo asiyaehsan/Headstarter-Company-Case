@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { UserAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export const Account = () => {
   const { logOut, user } = UserAuth();
+  const navigate = useNavigate();
 
   const handleSignOut = async () => {
     try {
@@ -11,7 +13,14 @@ export const Account = () => {
       console.log(error);
     }
   };
-
+  useEffect(() => {
+    if (user != null) {
+      // navigate('/account');
+      navigate('/calendar');
+    } else {
+      navigate('/');
+    }
+  }, [user]);
   return (
     <div className=''>
       <h1 className=''>Account</h1>
