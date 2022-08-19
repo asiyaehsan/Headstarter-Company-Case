@@ -10,3 +10,4 @@ export const config = { mode: "rtc", codec: "vp8", appId: appId, token: token };
 // hooks
 export const useClient = createClient(config);
 export const useMicrophoneAndCameraTracks = createMicrophoneAndCameraTracks();
+export const channelName = "headstarter-channel";
