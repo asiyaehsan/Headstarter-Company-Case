@@ -11,23 +11,7 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <div>
-      <AuthContextProvider>
-       <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />;
-          <Route path="/signin" element={<Signin />} />;
-          <Route
-            path="/account"
-            element={
-              <Protected>
-                <Account />
-              </Protected>
-            }
-          />
-          ; 
-          <Route path="/calender" element={<CalendarPage />} />;
-        </Routes> 
-      </AuthContextProvider>
+     <CalendarPage />
     </div>
   );
 }

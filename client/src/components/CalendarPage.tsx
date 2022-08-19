@@ -1,9 +1,10 @@
 import React from 'react'
-import FullCalender, { DatesSetArg } from '@fullcalendar/react'
+import FullCalender, { DatesSetArg, EventClickArg } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction'
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { db } from '../firebase-config';
+import { Navigate } from 'react-router-dom';
 import {
   addDoc,
   collection,
@@ -28,6 +29,7 @@ const CalenderPage = () => {
     start: new Date(),
     end: new Date()
   })
+ 
 
  
 
@@ -75,6 +77,12 @@ const CalenderPage = () => {
     setRange({start:e.start, end:e.end})
   }
 
+  const handleEventClick = (e: EventClickArg) => {
+    if (e.jsEvent.ctrlKey) {
+        
+    }
+  }
+
     return (
         <>
         
@@ -84,6 +92,7 @@ const CalenderPage = () => {
                 events = {data}
                 plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
                 dateClick={handleDateClick}
+                eventClick={handleEventClick}
                 headerToolbar={{
                     left: 'prev,next today',
                     center: 'title',
