@@ -1,5 +1,9 @@
 import React from 'react'
-import FullCalender, { DatesSetArg, EventClickArg } from '@fullcalendar/react'
+
+import  { DatesSetArg, EventClickArg } from '@fullcalendar/react'
+
+import FullCalendar from '@fullcalendar/react'
+
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction'
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -23,7 +27,8 @@ interface VisibleDates{
 }
 
 
-const CalenderPage = () => {
+// const CalendarPage = () => {
+export const CalendarPage = () => {
   const [data, setData] = useState<any[]>([]);
   const [range, setRange] = useState<VisibleDates>({
     start: new Date(),
@@ -86,7 +91,7 @@ const CalenderPage = () => {
     return (
         <>
         
-        <FullCalender
+        <FullCalendar
           
                 datesSet={handleDatesSet}
                 events = {data}
@@ -104,4 +109,4 @@ const CalenderPage = () => {
 }
 
 
-export default CalenderPage
+// export default CalendarPage
