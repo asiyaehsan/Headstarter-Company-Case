@@ -4,7 +4,7 @@ import format from "date-fns/format";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
-import "react-big-calendar/lib/css/react-big-calendar.css"; //style our calender
+import "react-big-calendar/lib/css/react-big-calendar.css"; //style our calendar
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -38,7 +38,8 @@ const events = [
   },
 ];
 
-const CalenderPage = () => {
+// const CalendarPage = () => {
+export const CalendarPage = () => {
   const [newEvent, setNewEvent] = useState({
     tittle: "",
     start: "",
@@ -53,7 +54,7 @@ const CalenderPage = () => {
 
   return (
     <div>
-      <h1 className="calenderHeading">Calendar</h1>
+      <h1 className="calendarHeading">Calendar</h1>
       <h2>Add new Event</h2>
       <div>
         <input
@@ -102,4 +103,4 @@ const CalenderPage = () => {
   );
 };
 
-export default CalenderPage;
+export default CalendarPage;
