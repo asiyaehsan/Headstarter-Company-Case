@@ -18,18 +18,10 @@ import {
 import { useState, useEffect } from 'react';
 import '../components/CalendarPage.css'
 import {Link } from 'react-router-dom'
-
-
-
-
-
-
 interface VisibleDates{
   start: Date;
   end: Date;
 }
-
-
 // const CalendarPage = () => {
 export const CalendarPage = () => {
   const [data, setData] = useState<any[]>([]);
@@ -37,24 +29,15 @@ export const CalendarPage = () => {
     start: new Date(),
     end: new Date()
   })
-  
- 
-
     const handleDateClick = async (e: DateClickArg) => {
       if (e.jsEvent.shiftKey) {
         const title = prompt('Enter title', e.dateStr);
         const confirmAllDay = prompt('Is this an all day event?');
-
-        
-        
-        
         try {
           await addDoc(collection(db, 'Events'), {
            title: title ? title : e.dateStr,
            start: e.date,
             allDay: confirmAllDay === 'yes' ? true : false,
-           
-          
           })
         } catch (err) {
             alert(err)
@@ -92,11 +75,11 @@ export const CalendarPage = () => {
     return (
       <>
         <h1>Welcome to your team calendar!</h1>
-        <Link to='/videocall'>
+        {/* <Link to='/videocall'>
         <button className='button1'>Attend Meeting</button>
          </Link>
        
-        <button className='button2'>Home Logout</button>
+        <button className='button2'>Home Logout</button> */}
         
         <FullCalendar 
           
