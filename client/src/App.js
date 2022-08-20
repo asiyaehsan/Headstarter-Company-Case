@@ -15,8 +15,8 @@ function App() {
   return (
    
        <div className="App" style={{ height: "100%" }}>
-        <VideoCallPage /> 
-       <CalendarPage /> 
+      {/*  <VideoCallPage /> 
+       <CalendarPage /> */}
       <AuthContextProvider>
         <NavBar />
         <Routes>
