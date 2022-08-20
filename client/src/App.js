@@ -11,10 +11,8 @@ import VideoCallPage from "./pages/VideoCallPage";
 
 function App() {
   return (
-    <div>
-      <CalendarPage />
-    </div>
-       /* <div className="App" style={{ height: "100%" }}>
+   
+       <div className="App" style={{ height: "100%" }}>
       <VideoCallPage /> 
        <CalendarPage /> 
       <AuthContextProvider>
@@ -35,7 +33,7 @@ function App() {
       </AuthContextProvider>
 
     </div>
-          */
+          
   );
 }
 
