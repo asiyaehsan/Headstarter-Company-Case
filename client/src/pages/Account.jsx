@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+
 import Sidebar from '../components/Sidebar';
+
 
 export const Account = () => {
   const { logOut, user } = UserAuth();
@@ -15,12 +17,12 @@ export const Account = () => {
     }
   };
 
-  useEffect(() => {
-    if (user == null) {
-      navigate('/');
-      // navigate('/calendar');
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user == null) {
+  //     navigate('/');
+  //     // navigate('/calendar');
+  //   }
+  // }, [user]);
 
   return (
     <div className=''>
