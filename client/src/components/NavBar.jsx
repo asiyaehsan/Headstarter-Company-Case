@@ -26,7 +26,7 @@ const Navbar = () => {
           <br /> */}
           <Link to='/calendar'>Calendar</Link>
           <br />
-          <Link to='/videocall'>Video Call</Link>
+          {/* <Link to='/videocall'>Video Call</Link> */}
                   <Account/>
         </div>
 
