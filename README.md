@@ -1,14 +1,3 @@
 # Headstarter-Company-Case
 
-## Install packages 
-
-```bash
-npm install --legacy-peer-deps
-```
-
-## Run
-
-```bash
-cd client
-npm run start
-```
+Install packages with ```npm install --legacy-peer-deps``` instead of ```npm install``` to avoid errors.

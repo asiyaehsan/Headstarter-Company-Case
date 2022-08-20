@@ -15,8 +15,10 @@ export const Account = () => {
   };
   useEffect(() => {
     if (user != null) {
-      navigate('/account');
-      // navigate('/calendar');
+      // navigate('/account');
+      navigate('/calendar');
+    } else {
+      navigate('/');
     }
   }, [user]);
   return (

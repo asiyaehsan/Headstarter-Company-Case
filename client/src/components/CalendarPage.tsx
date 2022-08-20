@@ -5,8 +5,6 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction'
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { db } from '../firebase-config';
-import "./CalendarPage.css"
-import VideoCallPage from '../pages/VideoCallPage'
 
 import {
   addDoc,
@@ -19,12 +17,18 @@ import {
 } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import '../components/CalendarPage.css'
-import { Link } from 'react-router-dom'
+import {Link } from 'react-router-dom'
+
+
+
+
+
 
 interface VisibleDates{
   start: Date;
   end: Date;
 }
+
 
 // const CalendarPage = () => {
 export const CalendarPage = () => {
@@ -33,17 +37,24 @@ export const CalendarPage = () => {
     start: new Date(),
     end: new Date()
   })
+  
+ 
 
     const handleDateClick = async (e: DateClickArg) => {
       if (e.jsEvent.shiftKey) {
         const title = prompt('Enter title', e.dateStr);
         const confirmAllDay = prompt('Is this an all day event?');
 
+        
+        
+        
         try {
           await addDoc(collection(db, 'Events'), {
            title: title ? title : e.dateStr,
            start: e.date,
-            allDay: confirmAllDay === 'yes' ? true : false,  
+            allDay: confirmAllDay === 'yes' ? true : false,
+           
+          
           })
         } catch (err) {
             alert(err)
@@ -76,15 +87,17 @@ export const CalendarPage = () => {
   const handleDatesSet = (e: DatesSetArg) => {
     setRange({start:e.start, end:e.end})
   }
+  
+  
     return (
       <>
         <h1>Welcome to your team calendar!</h1>
         <Link to='/videocall'>
         <button className='button1'>Attend Meeting</button>
-        </Link>
+         </Link>
+       
+        <button className='button2'>Home Logout</button>
         
-        {/* <button className='button2'>Home Logout</button> */}
-
         <FullCalendar 
           
                 datesSet={handleDatesSet}

@@ -12,7 +12,7 @@ import VideoCallPage from "./pages/VideoCallPage";
 
 function App() {
   return (
-    <div>
+    <div className="App" style={{ height: "100%" }}>
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Login />} />;
