@@ -39,6 +39,7 @@ export const CalendarPage = () => {
            start: e.date,
             allDay: confirmAllDay === 'yes' ? true : false,
           })
+       
         } catch (err) {
             alert(err)
         }
@@ -74,7 +75,7 @@ export const CalendarPage = () => {
   
     return (
       <>
-        <h1>Welcome to your team calendar!</h1>
+     
         {/* <Link to='/videocall'>
         <button className='button1'>Attend Meeting</button>
          </Link>
