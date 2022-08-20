@@ -57,7 +57,7 @@ export default function Login() {
                 px-4 py-3 mt-6">Sign In</button>
         </form>
   
-        <hr class="my-6 mt-10 border-gray-300 w-full"/>
+        <hr class="my-6 mt-10 border-black w-full"/>
   
           <div class="flex mt-10 justify-center">
             <GoogleButton onClick={handleGoogleSignIn} />
