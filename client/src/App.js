@@ -13,6 +13,7 @@ import VideoCallPage from "./pages/VideoCallPage";
 
 function App() {
   return (
+
    
        <div className="App" style={{ height: "100%" }}>
       {/*  <VideoCallPage /> 
@@ -21,6 +22,7 @@ function App() {
         <NavBar />
         <Routes>
            <Route path="/" element={<Login />} />;
+
           <Route path="/calendar" element={<CalendarPage />} />;
           <Route path="/videocall" element={<VideoCallPage />} />;
           <Route
