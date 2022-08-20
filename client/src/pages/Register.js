@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import left from './images/left.png'
+import logo from './images/logo.jpeg'
 
 
 export default function Register() {
@@ -22,7 +22,7 @@ export default function Register() {
     <section class="flex flex-col md:flex-row h-screen items-center">
 
     <div class="bg- hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen object-scale-down h-48 w-96">
-      <img src={left} alt="" class="w-full pr-20 h-full object-cover"/>
+      <img src={logo} alt="" class="w-full pr-20 h-full object-cover"/>
     </div>
   
     <div class="position:relative xl:w-1/2 px-10
