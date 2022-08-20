@@ -1,14 +1,12 @@
 .fc {
-   height: 700px;
+    margin-left: 250px;
+   height: 555px;
    margin-top: 50px;
    justify-content: center;
+   width: 900px;
    
 }
-h1{
-    color: #3688D8;
-    justify-content: center;
-    text-align: center;
-}
+
 .button1{
     position: relative;
     margin-left: 400px;
@@ -34,5 +32,26 @@ h1{
     color: white;
     border: none;
 }
-
-
+.fc .fc-daygrid-event{
+    color: #000000;
+    
+}
+.fc-daygrid-event-dot{
+    border: 4px solid #000000;
+}
+.fc .fc-daygrid-day.fc-day-today{
+    background-color:#F2F2F2;
+}
+.fc .fc-event-title-container{
+    background-color: #79BBF5;
+}
+.fc .fc-event-title .fc-sticky{
+    color: #000000;
+}
+.fc .fc-toolbar-title{
+    color: #091772;
+    font-family: 'Open Sans';
+}
+.fc .fc-col-header-cell-cushion{
+    color: #5F5F5F;
+}
