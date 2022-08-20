@@ -34,7 +34,6 @@ const Navbar = () => {
         <div className="navBar">
           <Link to='/'>Sign in</Link>
           <br />
-
         </div>
       )}
       {/* {user?.displayName ? (
