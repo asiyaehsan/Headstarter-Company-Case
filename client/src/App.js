@@ -20,7 +20,7 @@ function App() {
             <Route path="/" element={<Login />} />;
             <Route path="/register" element={<Register />} />;
         </Routes>
-          
+        
         <NavBar />
         <Routes>
           <Route path="/calendar" element={<CalendarPage />} />;

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import Sidebar from '../components/Sidebar';
 
 export const Account = () => {
   const { logOut, user } = UserAuth();
