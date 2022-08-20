@@ -17,8 +17,8 @@ export const Signin = () => {
 
   useEffect(() => {
     if (user != null) {
-      // navigate('/account');
-      navigate('/calendar');
+      navigate('/account');
+      // navigate('/calendar');
     }
   }, [user]);
 

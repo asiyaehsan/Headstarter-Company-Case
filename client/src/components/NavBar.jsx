@@ -1,59 +1,40 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
-import { Account } from "../pages/Account";
+import React, { useState } from 'react'
 
-const Navbar = () => {
-  const { user, logOut } = UserAuth();
-  const handleSignOut = async () => {
-    try {
-      await logOut()
-    } catch (error) {
-      console.log(error)
-    }
+function Navbar() {
+  const [nav, setNav] = useState(false)
+  const handleClick = () => {
+    setNav(!nav)
   }
 
   return (
-    <div className=''>
-      <h1 className=''>
-        Headstarter Group Manager
-      </h1>
-      {user?.displayName ? (
-        <div className="navBar">
-          <Link to='/'>Home</Link>
-          <br />
-      {/* <Link to='/account'>Account</Link>
-          <br /> */}
-          <Link to='/calendar'>Calendar</Link>
-          <br />
-          <Link to='/videocall'>Video Call</Link>
-                  <Account/>
-        </div>
-
-      ) : (
-        <div className="navBar">
-          <Link to='/'>Sign in</Link>
-          <br />
-
-        </div>
-      )}
-      {/* {user?.displayName ? (
-        <button onClick={handleSignOut}>Logout</button>
-      ) : (
-        // <Link to='/signin'>Sign in</Link>
-          <div className="navBar">
-            <Link to='/'>Home</Link>
-            <br />
-            <Link to='/account'>Account</Link>
-            <br />
-            <Link to='/calendar'>Calendar</Link>
-            <br />
-            <Link to='/videocall'>Video Call</Link>
+    <div className='App bg-gradient-to-b from-[#BBC2FA] to-white'>
+      <div className='w-screen h-[120px] z-10 fixed drop-shadow-lg '>
+        <div className='px-2 flex justify-between items-center w-full h-full'>
+          <div className='flex items-center ml-60 text-[#424B5A]'>
+            <a href='/'>
+              <h1 className='text-3cl font-bold mr-4 sm:text-4xl text-[#424B5A]'>
+                Headstarter Group Manager
+              </h1>
+            </a>
           </div>
-        
-      )} */}
-    </div>
-  );
-};
 
-export default Navbar;
+          <div className='hidden md:flex pr-4 mr-60'>
+            <a
+              href='/videocall'
+              className='border-none bg-transparent text-[#424B5A] font-bold mr-4 flex justify-center items-center'
+            >
+              Video Call
+            </a>
+            <a href='/calendar'>
+              <button className='px-8 py-3 bg-[#424B5A] text-white rounded-2xl'>
+                Calendar
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    )
+}
+
+export default Navbar
