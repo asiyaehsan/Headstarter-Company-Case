@@ -15,12 +15,12 @@ export const Account = () => {
     }
   };
 
-  useEffect(() => {
-    if (user == null) {
-      navigate('/');
-      // navigate('/calendar');
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user == null) {
+  //     navigate('/');
+  //     // navigate('/calendar');
+  //   }
+  // }, [user]);
 
   return (
     <div className=''>
