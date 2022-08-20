@@ -14,7 +14,7 @@ export default function VideoPlayer(props) {
 
   return (
     //   Agora video player doesn't work well if the parent container's heigh is not set to 100%
-    <Grid container style={{ height: "100%" }}>
+    <Grid container style={{ height: "100%", width: "100%" }}>
       <Grid item xs={gridSpacing}>
         <AgoraVideoPlayer
           videoTrack={tracks[1]}
