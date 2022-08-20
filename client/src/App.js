@@ -14,13 +14,12 @@ function App() {
   return (
     <div>
       <AuthContextProvider>
-        <NavBar />
-        {/* <Routes>
-          <Route path="/" element={<Login />} />;
-        </Routes> */}
-
         <Routes>
           <Route path="/" element={<Login />} />;
+        </Routes>
+
+        <NavBar />
+        <Routes>
           <Route path="/calendar" element={<CalendarPage />} />;
           <Route path="/videocall" element={<VideoCallPage />} />;
           <Route

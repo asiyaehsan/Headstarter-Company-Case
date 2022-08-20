@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import left from "../images/left.png";
+import left from "./images/left.png";
 
 export default function Login() {
   const { googleSignIn, user } = UserAuth();
@@ -36,7 +36,7 @@ export default function Login() {
             Welcome Back!
           </h1>
 
-          {/* <form class="mt-6" action="#" method="POST">
+          <form class="mt-6" action="#" method="POST">
             <div>
               <label class="block font-bold text-3xl text-gray-700">
                 Email Address
@@ -83,7 +83,7 @@ export default function Login() {
                 px-4 py-3 mt-6">
               Sign In
             </button>
-          </form> */}
+          </form>
 
           <hr class="my-6 mt-10 border-black w-full" />
 
@@ -91,14 +91,14 @@ export default function Login() {
             <GoogleButton onClick={handleGoogleSignIn} />
           </div>
 
-          {/* <p class="mt-10 text-2xl text-indigo-400 flex justify-center">
+          <p class="mt-10 text-2xl text-indigo-400 flex justify-center">
             Don't have an account?
             <a
               href="#"
               class="ml-2 text-2xl text-indigo-900 hover:text-indigo-500 focus:text-indigo-600 font-semibold">
               Sign up!
             </a>
-          </p> */}
+          </p>
         </div>
       </div>
     </section>
