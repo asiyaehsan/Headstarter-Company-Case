@@ -6,17 +6,21 @@ import { Account } from "./pages/Account";
 import { Protected } from "./components/Protected";
 import Login from "./pages/Login";
 import NavBar from "./components/NavBar";
+import Register from "./pages/Register";
 
 import { CalendarPage } from "./components/CalendarPage.tsx";
 import VideoCallPage from "./pages/VideoCallPage";
 
 function App() {
   return (
-   
-       <div className="App" style={{ height: "100%" }}>
-      <VideoCallPage /> 
-       <CalendarPage /> 
+    <div className="App" style={{ height: "100%" }}>
+      <VideoCallPage />
+      <CalendarPage />
       <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />;
+        </Routes>
+
         <NavBar />
         <Routes>
           <Route path="/calendar" element={<CalendarPage />} />;
