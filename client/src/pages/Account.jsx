@@ -13,14 +13,14 @@ export const Account = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
-    if (user != null) {
-      // navigate('/account');
-      navigate('/calendar');
-    } else {
+    if (user == null) {
       navigate('/');
+      // navigate('/calendar');
     }
   }, [user]);
+
   return (
     <div className=''>
       <h1 className=''>Account</h1>

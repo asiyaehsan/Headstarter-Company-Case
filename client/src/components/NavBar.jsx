@@ -1,16 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
-import { Account } from "../pages/Account";
+import React, { useState } from 'react'
 
-const Navbar = () => {
-  const { user, logOut } = UserAuth();
-  const handleSignOut = async () => {
-    try {
-      await logOut()
-    } catch (error) {
-      console.log(error)
-    }
+function Navbar() {
+  const [nav, setNav] = useState(false)
+  const handleClick = () => {
+    setNav(!nav)
   }
 
   return (
@@ -34,6 +27,7 @@ const Navbar = () => {
         <div className="navBar">
           <Link to='/'>Sign in</Link>
           <br />
+
         </div>
       )}
       {/* {user?.displayName ? (
@@ -54,5 +48,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

@@ -12,12 +12,11 @@ import VideoCallPage from "./pages/VideoCallPage";
 
 function App() {
   return (
-    <div className="App" style={{ height: "100%" }}>
+   
+       <div className="App" style={{ height: "100%" }}>
+      <VideoCallPage /> 
+       <CalendarPage /> 
       <AuthContextProvider>
-        <Routes>
-          <Route path="/" element={<Login />} />;
-        </Routes>
-
         <NavBar />
         <Routes>
           <Route path="/calendar" element={<CalendarPage />} />;
