@@ -6,6 +6,7 @@ import { Account } from "./pages/Account";
 import { Protected } from "./components/Protected";
 import Login from "./pages/Login";
 import NavBar from "./components/NavBar";
+import Register from "./pages/Register";
 
 import { CalendarPage } from "./components/CalendarPage.tsx";
 import VideoCallPage from "./pages/VideoCallPage";
@@ -17,6 +18,7 @@ function App() {
       <AuthContextProvider>
         <Routes>
             <Route path="/" element={<Login />} />;
+            <Route path="/register" element={<Register />} />;
         </Routes>
           
         <NavBar />
