@@ -5,12 +5,13 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import React, { useEffect } from 'react';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 const navigation = [
   { name: 'Dashboard', href: 'account', current: true },
   { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: 'calendar', current: false },
+  { name: 'Join Meeting', href: 'videocall', current: false },
 ]
 
 function classNames(...classes) {
@@ -99,7 +100,7 @@ export default function Example() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://avatars.githubusercontent.com/u/24277939?v=4"
+                        src="https://www.gravatar.com/avatar/d042064e87c789458a3eda1c519a19de?d=https%3A%2F%2Fapp.theheadstarter.com%2Fassets%2Favatar_default.jpeg&s=200"
                         alt=""
                       />
                     </Menu.Button>

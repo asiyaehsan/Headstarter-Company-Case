@@ -19,6 +19,12 @@ function App() {
       {/*  <VideoCallPage /> 
        <CalendarPage /> */}
       <AuthContextProvider>
+
+        <Routes>
+            <Route path="/" element={<Login />} />;
+            <Route path="/register" element={<Register />} />;
+        </Routes>
+
         <NavBar />
         <Routes>
            <Route path="/" element={<Login />} />;
