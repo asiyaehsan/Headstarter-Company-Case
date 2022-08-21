@@ -9,7 +9,7 @@ import Sidebar from './Sidebar';
 
 const navigation = [
   { name: 'Dashboard', href: 'account', current: true },
-  { name: 'Team', href: '#', current: false },
+  { name: 'Team', href: 'team', current: false },
   { name: 'Calendar', href: 'calendar', current: false },
   { name: 'Join Meeting', href: 'videocall', current: false },
 ]

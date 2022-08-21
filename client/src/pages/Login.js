@@ -3,10 +3,14 @@ import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import left from "./images/left.png";
+import { getDatabase, ref, set } from "firebase/database";
+import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
+import app from "../firebase-config";
 
 export default function Login() {
   const { googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
+  const auth = getAuth();
 
   const handleGoogleSignIn = async () => {
     try {
@@ -15,7 +19,34 @@ export default function Login() {
       console.log(error);
     }
   };
+  getRedirectResult(auth)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access Google APIs.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
 
+      // The signed-in user info.
+      const userInfo = result.user;
+      const database = getDatabase(app);
+      set(ref(database, "Group/" + userInfo.displayName), {
+        MemberName: userInfo.displayName,
+        MemberEmail: userInfo.email,
+      })
+        .then(() => {})
+        .catch((error) => {
+          alert("There was an error, details: " + error);
+        });
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
   useEffect(() => {
     if (user != null) {
       navigate("/account");

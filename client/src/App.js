@@ -10,25 +10,22 @@ import Register from "./pages/Register";
 
 import { CalendarPage } from "./components/CalendarPage.tsx";
 import VideoCallPage from "./pages/VideoCallPage";
+import { TeamMembers } from "./components/TeamMembers";
 
 function App() {
   return (
-
-   
-       <div className="App" style={{ height: "100%" }}>
+    <div className="App" style={{ height: "100%" }}>
       {/*  <VideoCallPage /> 
        <CalendarPage /> */}
       <AuthContextProvider>
-
         <Routes>
-            <Route path="/" element={<Login />} />;
-            <Route path="/register" element={<Register />} />;
+          <Route path="/" element={<Login />} />;
+          <Route path="/register" element={<Register />} />;
         </Routes>
 
         <NavBar />
         <Routes>
-           <Route path="/" element={<Login />} />;
-
+          <Route path="/" element={<Login />} />;
           <Route path="/calendar" element={<CalendarPage />} />;
           <Route path="/videocall" element={<VideoCallPage />} />;
           <Route
@@ -36,6 +33,14 @@ function App() {
             element={
               <Protected>
                 <Account />
+              </Protected>
+            }
+          />
+          <Route
+            path="/team"
+            element={
+              <Protected>
+                <TeamMembers />
               </Protected>
             }
           />
