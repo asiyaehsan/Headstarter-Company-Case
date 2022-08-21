@@ -3,7 +3,6 @@ import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-import left from "./images/left.png";
 import { getDatabase, ref, set } from "firebase/database";
 import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 import app from "../firebase-config";
