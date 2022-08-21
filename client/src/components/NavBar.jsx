@@ -36,7 +36,7 @@ export default function Example() {
 
 
   return (
-    <Disclosure as="nav" className="bg-purple-200">
+    <Disclosure as="nav" className='bg-purple-200'>
       {({ open }) => (
         <>
           <div className="max-w-9xl mx-auto sm:px-6 ">
