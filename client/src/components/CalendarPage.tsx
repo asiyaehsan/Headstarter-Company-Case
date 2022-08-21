@@ -18,6 +18,7 @@ import {
 import { useState, useEffect } from 'react';
 import '../components/CalendarPage.css'
 import {Link } from 'react-router-dom'
+import Sidebar from './Sidebar'
 interface VisibleDates{
   start: Date;
   end: Date;
@@ -75,13 +76,7 @@ export const CalendarPage = () => {
   
     return (
       <>
-     
-        {/* <Link to='/videocall'>
-        <button className='button1'>Attend Meeting</button>
-         </Link>
-       
-        <button className='button2'>Home Logout</button> */}
-        
+
         <FullCalendar 
           
                 datesSet={handleDatesSet}

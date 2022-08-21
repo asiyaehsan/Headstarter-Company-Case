@@ -31,7 +31,7 @@ const Sidebar = () => {
         } h-screen p-5  pt-8 relative duration-300`}
       >
         <ChartBarIcon className='text-[#707FDD] w-6' 
-          className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
+          style={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
         />
@@ -48,7 +48,7 @@ const Sidebar = () => {
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
+              style={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
               ${Menu.gap ? "mt-9" : "mt-2"} ${
                 index === 0 && "bg-light-white"
               } `}
