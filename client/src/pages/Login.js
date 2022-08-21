@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import left from "./images/left.png";
+import logo from "./images/logo.jpeg";
 
 export default function Login() {
   const { googleSignIn, user } = UserAuth();
@@ -24,15 +24,15 @@ export default function Login() {
 
   return (
     <section class="flex flex-col md:flex-row h-screen items-center">
-      <div class="bg- hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen object-scale-down h-48 w-96">
-        <img src={left} alt="" class="w-full pr-20 h-full object-cover" />
+      <div class="bg- hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+        <img src={logo} alt="" class="w-full pr-20 h-full object-cover" />
       </div>
 
       <div
         class="position:relative xl:w-1/2 px-10
           flex items-center justify-center">
         <div class="w-full h-100">
-          <h1 class="text-8xl text-indigo-900 font-bold mb-20">
+          <h1 class="text-8xl text-indigo-900 font-bold mb-20 flex justify-center">
             Welcome Back!
           </h1>
 
@@ -94,7 +94,7 @@ export default function Login() {
           <p class="mt-10 text-2xl text-indigo-400 flex justify-center">
             Don't have an account?
             <a
-              href="#"
+              href="/register"
               class="ml-2 text-2xl text-indigo-900 hover:text-indigo-500 focus:text-indigo-600 font-semibold">
               Sign up!
             </a>
