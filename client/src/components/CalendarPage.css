@@ -1,37 +1,12 @@
 .fc {
-    margin-left: 250px;
-   height: 555px;
-   margin-top: 50px;
-   justify-content: center;
-   width: 900px;
-   
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    justify-content: center;
 }
 
-.button1{
-    position: relative;
-    margin-left: 400px;
-    margin-top: 10px;
-    border-radius: 8px;
-    box-shadow: 5px 5px 5px rgb(160, 160, 160);
-    width: 250px;
-        height: 50px;
-        background-color: #3688D8;
-        font-size: 20px;
-        color: white;
-        border: none;
-     
-    }
-.button2 {
-    box-shadow: 5px 5px 5px rgb(160, 160, 160);
-    border-radius: 8px;
-    margin-left: 50px;
-    width: 250px;
-    height: 50px;
-    background-color: #3688D8;
-    font-size: 19px;
-    color: white;
-    border: none;
-}
+
 .fc .fc-daygrid-event{
     color: #000000;
     
@@ -43,7 +18,7 @@
     background-color:#F2F2F2;
 }
 .fc .fc-event-title-container{
-    background-color: #79BBF5;
+    background-color: #E9D5FF;
 }
 .fc .fc-event-title .fc-sticky{
     color: #000000;
@@ -54,4 +29,8 @@
 }
 .fc .fc-col-header-cell-cushion{
     color: #5F5F5F;
+}
+.fc .fc-event-title {
+    color: #000000;
+    
 }

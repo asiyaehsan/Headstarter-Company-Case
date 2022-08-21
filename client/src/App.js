@@ -13,21 +13,27 @@ import VideoCallPage from "./pages/VideoCallPage";
 import { TeamMembers } from "./components/TeamMembers";
 
 function App() {
-  return (
-    <div className="App" style={{ height: "100%" }}>
-      {/*  <VideoCallPage /> 
-       <CalendarPage /> */}
-      <AuthContextProvider>
-        <Routes>
-          <Route path="/" element={<Login />} />;
-          <Route path="/register" element={<Register />} />;
-        </Routes>
 
-        <NavBar />
+  return (
+
+       <div className="App" style={{ height: "100%" }}>
+   
+      <AuthContextProvider>
+       <Routes>
+            <Route path="/" element={<Login />} />;
+            <Route path="/register" element={<Register />} />;
+
+        </Routes>
+      
+          <NavBar />
+          
         <Routes>
+
           <Route path="/" element={<Login />} />;
+
           <Route path="/calendar" element={<CalendarPage />} />;
           <Route path="/videocall" element={<VideoCallPage />} />;
+          
           <Route
             path="/account"
             element={
@@ -45,6 +51,9 @@ function App() {
             }
           />
         </Routes>
+
+
+
       </AuthContextProvider>
     </div>
   );

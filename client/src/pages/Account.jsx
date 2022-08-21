@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+
 import { TeamMembers } from '../components/TeamMembers';
 import Sidebar from '../components/Sidebar';
 import { getDatabase, ref, set, remove} from "firebase/database";
 import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 import app from "../firebase-config";
+
+import { GoogleButton } from "react-google-button";
 
 export const Account = () => {
   const { logOut, user } = UserAuth();

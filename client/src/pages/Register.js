@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import logo from './images/logo.jpeg'
+import logo from "./images/logo.jpeg";
 
 
 export default function Register() {
@@ -17,11 +17,17 @@ export default function Register() {
     }
   };
 
+  useEffect(() => {
+    if (user != null) {
+      navigate("/account");
+    }
+  }, [user]);
+
 
   return (
     <section class="flex flex-col md:flex-row h-screen items-center">
 
-    <div class="bg- hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen object-scale-down h-48 w-96">
+    <div class="bg- hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
       <img src={logo} alt="" class="w-full pr-20 h-full object-cover"/>
     </div>
   
@@ -29,7 +35,7 @@ export default function Register() {
           flex items-center justify-center">
   
       <div class="w-full h-100">
-        <h1 class="text-8xl text-indigo-900 font-bold mb-10">Welcome!</h1>
+        <h1 class="text-8xl text-indigo-900 font-bold mb-10 flex justify-center">Welcome!</h1>
   
         <form action="#" method="POST">
           <div>
