@@ -49,7 +49,7 @@ export default function Login() {
       // ...
     });
   useEffect(() => {
-    if (user != null) {
+    if (user) {
       navigate("/home");
     }
   }, [user]);

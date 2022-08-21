@@ -12,18 +12,12 @@ export default function Register() {
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
+      navigate("/home")
     } catch (error) {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    if (user != null) {
-      navigate("/home");
-    }
-  }, [user]);
-
-
+  
   return (
     <section class="flex flex-col md:flex-row h-screen items-center">
 

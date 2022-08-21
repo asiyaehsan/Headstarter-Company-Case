@@ -30,7 +30,6 @@ function App() {
         <Routes>
           <Route path="/calendar" element={<CalendarPage />} />;
           <Route path="/videocall" element={<VideoCallPage />} />;
-          <Route path="/team" element={<Team />} />;
           
           <Route
             path="/home"

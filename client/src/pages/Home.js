@@ -17,10 +17,10 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    if (user == null) {
+    if (!user) {
       navigate('/');
     }
-  }, [user]);
+  }, []);
 
   return (
     <div className=''>
