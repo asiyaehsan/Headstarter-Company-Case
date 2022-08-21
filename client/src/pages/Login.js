@@ -18,7 +18,7 @@ export default function Login() {
 
   useEffect(() => {
     if (user != null) {
-      navigate("/account");
+      navigate("/home");
     }
   }, [user]);
 

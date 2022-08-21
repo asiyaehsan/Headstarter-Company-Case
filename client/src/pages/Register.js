@@ -19,7 +19,7 @@ export default function Register() {
 
   useEffect(() => {
     if (user != null) {
-      navigate("/account");
+      navigate("/home");
     }
   }, [user]);
 

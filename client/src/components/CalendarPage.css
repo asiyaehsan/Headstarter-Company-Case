@@ -1,10 +1,9 @@
 .fc {
     margin-left: 100px;
-   height: 555px;
-   margin-top: 50px;
-   justify-content: center;
-   width: 1200px;
-   
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    justify-content: center;
 }
 
 
