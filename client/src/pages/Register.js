@@ -17,6 +17,12 @@ export default function Register() {
     }
   };
 
+  useEffect(() => {
+    if (user != null) {
+      navigate("/account");
+    }
+  }, [user]);
+
 
   return (
     <section class="flex flex-col md:flex-row h-screen items-center">
