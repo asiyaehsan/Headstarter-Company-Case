@@ -28,9 +28,6 @@ function App() {
       <div className="">
         <NavBar />
         <Routes>
-
-          <Route path="/" element={<Login />} />;
-
           <Route path="/calendar" element={<CalendarPage />} />;
           <Route path="/videocall" element={<VideoCallPage />} />;
           <Route path="/team" element={<Team />} />;
