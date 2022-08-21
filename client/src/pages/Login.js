@@ -2,13 +2,11 @@ import React, { useEffect } from "react";
 import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-
 import { getDatabase, ref, set } from "firebase/database";
 import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 import app from "../firebase-config";
 
 import logo from "./images/logo.jpeg";
-
 
 export default function Login() {
   const { googleSignIn, user } = UserAuth();
@@ -52,7 +50,7 @@ export default function Login() {
     });
   useEffect(() => {
     if (user != null) {
-      navigate("/account");
+      navigate("/home");
     }
   }, [user]);
 

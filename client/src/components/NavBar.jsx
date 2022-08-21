@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import { UserAuth } from '../context/AuthContext';
 
 const navigation = [
-  { name: 'Dashboard', href: 'account', current: true },
+  { name: 'Dashboard', href: '/', current: true },
   { name: 'Team', href: 'team', current: false },
   { name: 'Calendar', href: 'calendar', current: false },
   { name: 'Join Meeting', href: 'videocall', current: false },
@@ -36,7 +36,7 @@ export default function Example() {
 
 
   return (
-    <Disclosure as="nav" className='bg-purple-200'>
+    <Disclosure as="nav" className='bg-purple-200 px-5'>
       {({ open }) => (
         <>
           <div className="max-w-9xl mx-auto sm:px-6 ">
@@ -53,10 +53,10 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <a href='/account'>
+                <a href='/home'>
                   <div className="flex-shrink-0 flex items-center">
                     <img
-                      className="hidden lg:block h-10 w-auto"
+                      className="hidden lg:block h-11 w-auto"
                       src="https://www.theheadstarter.com/static/media/logo.ddf12db2.svg"
                       alt="Workflow"
                     />
@@ -70,7 +70,7 @@ export default function Example() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-indigo-900 text-white text-lg' : 'text-lg text-indigo-500 hover:bg-indigo-600 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-2xl'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -116,9 +116,9 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 text-3xl' : '', 'block px-4 py-2 text-3xl text-gray-500')}
                           >
-                            Your Profile
+                            My Profile
                           </a>
                         )}
                       </Menu.Item>
@@ -126,7 +126,7 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 text-3xl' : '', 'block px-4 py-2 text-3xl text-gray-500')}
                           >
                             Settings
                           </a>
@@ -137,7 +137,7 @@ export default function Example() {
                           <a
                             href="/"
                             onClick={handleSignOut}
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 text-3xl' : '', 'block px-4 py-2 text-3xl text-gray-500')}
                           >
                             Sign out
                           </a>
