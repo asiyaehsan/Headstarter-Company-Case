@@ -11,6 +11,10 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_oba80fg', 'service_oba80fg', form.current, '6sAjMDieGMezCxlzm')
+    emailjs.send("service_oba80fg","template_yecws5x",{
+      user_name: name,
+      user_email: email,
+      });
   };
 
 //   return (
